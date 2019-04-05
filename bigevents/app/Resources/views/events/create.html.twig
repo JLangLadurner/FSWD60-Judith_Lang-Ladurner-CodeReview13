@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h2 class="pager-header">Add a Event</h2>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+	{{form_start(form)}}
+	{{form_widget(form)}}
+	{{form_end(form)}}
+	</div>
+</div>
+
+{% endblock %}

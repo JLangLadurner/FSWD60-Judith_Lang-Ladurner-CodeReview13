@@ -1,0 +1,38 @@
+.border {
+        border: 1px solid black;
+        background-color: #CCC;
+        margin-left: 20px;
+ }
+
+ .wrapper {
+    	margin: 0 auto;
+ }
+
+ #img {
+
+ 	margin-top: 5px;
+ }
+
+ #secondRow{
+	margin-top: 20px;
+ }
+
+ .about{
+
+ }
+
+ .view {
+ 	border: 1px solid green;
+ 	background-color: lightblue;
+ }
+
+#view {
+	margin-left: 80px;
+	margin-top: 10px;
+}
+
+#slides{
+  width: 1200px;
+  height: 600px;
+  border-radius: 5%;
+}

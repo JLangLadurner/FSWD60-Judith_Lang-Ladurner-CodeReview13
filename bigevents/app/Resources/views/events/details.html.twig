@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<a class="btn btn-lg btn-info" href="/"><i class="far fa-arrow-alt-circle-left"> Back</i></a> 
+
+<h2 class="pager-header text-center">Details</h2>
+<div  class="col-md-6 col-md-offset-3 view " >
+		<img id="view" class="card-img-top" src = "{{events.img}}" width="400" height="350" alt="Card image cap">
+		<h3 class="page-header">{{events.eventName}}</h3>
+		<p>Date: <strong>{{events.eventDate|date('d-m-Y')}}</strong></p>
+		<p>Time: <strong>{{events.eventTime|date('H:i')}}</strong></p>
+		<p>Description: {{events.description}}</p>
+		<p>Capacity: {{events.capacity}}</p>
+		<p>Contact: {{events.email}}</p>
+		<p>Phone: {{events.phoneNr}}</p>
+		<p>Address: {{events.address}}</p>
+		<a href="{{events.url}}"><i class="fas fa-globe"></i></a>
+		<hr>
+		<p>Type: {{events.eventType}}</p>
+		</div>
+</div>
+{% endblock %}

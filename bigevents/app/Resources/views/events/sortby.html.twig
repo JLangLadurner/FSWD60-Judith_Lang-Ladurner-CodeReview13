@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="row">
+	<h2 class="page-header text-center">Music Events</h2>
+
+	{% for events in events %}
+	{% if events.eventType == "music" %}
+	<!-- do not forget to bring back results in array -->
+	<div  class="col-md-2 col-md-offset-3 border " >
+		<img id="img" class="card-img-top" src = "{{events.img}}" width="150" height="100" alt="Card image cap">
+		<h5 class="page-header">{{events.eventName}}</h5>
+		<p>{{events.eventDate|date('d-m-Y')}}</p>
+		<p>{{events.eventTime|date('H:i')}}</p>
+		<a href="/details/{{events.id}}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+		<hr>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+
+</div>
+
+<div class="row">
+	
+	<h2 class="page-header text-center">Movie Events</h2>
+
+	{% for events in events %}
+	{% if events.eventType == "movie" %}
+	<!-- do not forget to bring back results in array -->
+	<div  class="col-md-2 col-md-offset-3 border " >
+		<img id="img" class="card-img-top" src = "{{events.img}}" width="150" height="100" alt="Card image cap">
+		<h5 class="page-header">{{events.eventName}}</h5>
+		<p>{{events.eventDate|date('d-m-Y')}}</p>
+		<p>{{events.eventTime|date('H:i')}}</p>
+		<a href="/details/{{events.id}}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+		<hr>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+</div>
+<div class="row">
+	
+	<h2 class="page-header">Sport Events</h2>
+
+	{% for events in events %}
+	{% if events.eventType == "sport" %}
+	<!-- do not forget to bring back results in array -->
+	<div  class="col-md-2 col-md-offset-3 border " >
+		<img id="img" class="card-img-top" src = "{{events.img}}" width="150" height="100" alt="Card image cap">
+		<h5 class="page-header">{{events.eventName}}</h5>
+		<p>{{events.eventDate|date('d-m-Y')}}</p>
+		<p>{{events.eventTime|date('H:i')}}</p>
+		<a href="/details/{{events.id}}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+		<hr>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+</div>
+{% endblock %}
